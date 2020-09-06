@@ -313,7 +313,7 @@
 	"block.create.redstone_contact": "接触式红石信号发生器",
 	"block.create.redstone_link": "无限红石信号终端",
 	"block.create.refined_radiance_casing": "光辉机壳",
-	"block.create.reinforced_rail": "UNLOCALIZED: Reinforced Rail",
+	"block.create.reinforced_rail": "强化铁轨",
 	"block.create.rope": "绳索",
 	"block.create.rope_pulley": "绳索滑轮",
 	"block.create.rotation_speed_controller": "转速控制器",
@@ -655,7 +655,7 @@
 	"create.contraptions.cart_movement_mode.rotation_locked": "结构方向保持不变",
 
 	"create.logistics.filter": "过滤器",
-	"create.logistics.recipe_filter": "UNLOCALIZED: Recipe Filter",
+	"create.logistics.recipe_filter": "配方过滤器",
 	"create.logistics.firstFrequency": "频道. #1",
 	"create.logistics.secondFrequency": "频道. #2",
 
@@ -850,7 +850,7 @@
 	"create.tooltip.generationSpeed": "产生 %1$s %2$s",
 	"create.tooltip.analogStrength": "调节强度: %1$s/15",
 
-	"create.mechanical_arm.selection_mode": "UNLOCALIZED: Selection Mode",
+	"create.mechanical_arm.selection_mode": "选择模式",
 	"create.mechanical_arm.selection_mode.default": "UNLOCALIZED: First Valid Target",
 	"create.mechanical_arm.selection_mode.round_robin_soft": "UNLOCALIZED: Attempt Round Robin",
 	"create.mechanical_arm.selection_mode.round_robin_hard": "UNLOCALIZED: Enforce Round Robin",
@@ -1106,8 +1106,8 @@
 	"block.create.blaze_heater.tooltip.condition3": "使用烈焰人加热器助燃燃料时",
 	"block.create.blaze_heater.tooltip.behaviour3": "根据燃料在熔炉中的燃烧时间，提升熔炉中目前所剩余的燃烧时间。消耗当前物品。搭配_特殊的_ _燃料_ 方能取得最好效果。",
 
-	"block.create.reinforced_rail.tooltip": "UNLOCALIZED: REINFORCED RAIL",
-	"block.create.reinforced_rail.tooltip.summary": "UNLOCALIZED: A timber stabilized rail，_does_ _not_ _need_ _supports_。",
+	"block.create.reinforced_rail.tooltip": "强化铁轨",
+	"block.create.reinforced_rail.tooltip.summary": "一种横梁被加固过的轨道，_不需要支撑物_。",
 
 	"block.create.mechanical_mixer.tooltip": "MECHANICAL MIXER",
 	"block.create.mechanical_mixer.tooltip.summary": "一种能够动态进行搅拌的机器，需要恒定且够快的速度，并且下方需要放置_工作盆_(中间需要一格高)。",
