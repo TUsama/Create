@@ -116,7 +116,7 @@ public class AllShapes {
 	BASIN_BLOCK_SHAPE = shape(0, 2, 0, 16, 16, 16).erase(2, 2, 2, 14, 16, 14)
 		.add(2, 0, 2, 14, 2, 14)
 		.build(), BASIN_COLLISION_SHAPE =
-			shape(0, 2, 0, 16, 16, 16).erase(2, 5, 2, 14, 16, 14)
+			shape(0, 2, 0, 16, 13, 16).erase(2, 5, 2, 14, 16, 14)
 				.add(2, 0, 2, 14, 2, 14)
 				.build(),
 		HEATER_BLOCK_SHAPE = shape(2, 0, 2, 14, 14, 14).add(0, 0, 0, 16, 4, 16)
@@ -135,6 +135,8 @@ public class AllShapes {
 		SCHEMATICANNON_SHAPE = shape(1, 0, 1, 15, 8, 15).add(0.5, 8, 0.5, 15.5, 11, 15.5)
 			.build(),
 		PULLEY_MAGNET = shape(3, 0, 3, 13, 2, 13).add(FOUR_VOXEL_POLE.get(UP))
+			.build(),
+		SPOUT = shape(1, 2, 1, 15, 14, 15).add(2, 0, 2, 14, 16, 14)
 			.build(),
 		MILLSTONE = shape(0, 0, 0, 16, 6, 16).add(2, 6, 2, 14, 13, 14)
 			.add(3, 13, 3, 13, 16, 13)

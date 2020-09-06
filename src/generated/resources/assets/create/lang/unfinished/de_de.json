@@ -1,5 +1,5 @@
 {
-	"_": "Missing Localizations: 816",
+	"_": "Missing Localizations: 821",
 
 	"_": "->------------------------]  Game Elements  [------------------------<-",
 
@@ -312,7 +312,7 @@
 	"block.create.red_seat": "UNLOCALIZED: Red Seat",
 	"block.create.redstone_contact": "Redstone-Kontakt",
 	"block.create.redstone_link": "Redstone-Verbindung",
-	"block.create.refined_radiance_casing": "UNLOCALIZED: Refined Radiance Casing",
+	"block.create.refined_radiance_casing": "UNLOCALIZED: Radiant Casing",
 	"block.create.reinforced_rail": "UNLOCALIZED: Reinforced Rail",
 	"block.create.rope": "UNLOCALIZED: Rope",
 	"block.create.rope_pulley": "UNLOCALIZED: Rope Pulley",
@@ -331,9 +331,10 @@
 	"block.create.scoria_pillar": "UNLOCALIZED: Scoria Pillar",
 	"block.create.secondary_linear_chassis": "UNLOCALIZED: Secondary Linear Chassis",
 	"block.create.sequenced_gearshift": "UNLOCALIZED: Sequenced Gearshift",
-	"block.create.shadow_steel_casing": "UNLOCALIZED: Shadow Steel Casing",
+	"block.create.shadow_steel_casing": "UNLOCALIZED: Shadow Casing",
 	"block.create.shaft": "Welle",
 	"block.create.speedometer": "UNLOCALIZED: Speedometer",
+	"block.create.spout": "UNLOCALIZED: Spout",
 	"block.create.spruce_window": "UNLOCALIZED: Spruce Window",
 	"block.create.spruce_window_pane": "UNLOCALIZED: Spruce Window Pane",
 	"block.create.sticky_mechanical_piston": "Klebriger Mechanischer Kolben",
@@ -523,7 +524,7 @@
 	"death.attack.create.fan_fire": "%1$s hat heiße Luft eingeatmet",
 	"death.attack.create.fan_lava": "%1$s wurde von Lava verweht",
 	"death.attack.create.mechanical_drill": "%1$s wurde von einem Bohrer durchlöchert",
-	"death.attack.create.mechanical_saw": "UNLOCALIZED: %1$s got cut in half by Mechanical Saw",
+	"death.attack.create.mechanical_saw": "UNLOCALIZED: %1$s got cut in half by a Mechanical Saw",
 	"death.attack.create.cuckoo_clock_explosion": "UNLOCALIZED: %1$s was blown up by tampered cuckoo clock",
 
 	"create.block.deployer.damage_source_name": "UNLOCALIZED: a rogue Deployer",
@@ -652,6 +653,7 @@
 	"create.contraptions.cart_movement_mode.rotation_locked": "UNLOCALIZED: Lock rotation",
 
 	"create.logistics.filter": "Filter",
+	"create.logistics.recipe_filter": "UNLOCALIZED: Recipe Filter",
 	"create.logistics.firstFrequency": "Freq. #1",
 	"create.logistics.secondFrequency": "Freq. #2",
 
@@ -846,7 +848,10 @@
 	"create.tooltip.generationSpeed": "UNLOCALIZED: Generates at %1$s %2$s",
 	"create.tooltip.analogStrength": "UNLOCALIZED: Analog Strength: %1$s/15",
 
-	"create.mechanical_mixer.min_ingredients": "UNLOCALIZED: Min. Ingredients",
+	"create.mechanical_arm.selection_mode": "UNLOCALIZED: Selection Mode",
+	"create.mechanical_arm.selection_mode.default": "UNLOCALIZED: First Valid Target",
+	"create.mechanical_arm.selection_mode.round_robin_soft": "UNLOCALIZED: Attempt Round Robin",
+	"create.mechanical_arm.selection_mode.round_robin_hard": "UNLOCALIZED: Enforce Round Robin",
 
 	"create.gui.config.overlay1": "UNLOCALIZED: Hi :)",
 	"create.gui.config.overlay2": "UNLOCALIZED: This is a sample overlay",

@@ -2,6 +2,7 @@ package com.simibubi.create.foundation.utility;
 
 import java.util.function.Consumer;
 
+import net.minecraft.item.Items;
 import org.apache.commons.lang3.mutable.MutableInt;
 
 import net.minecraft.block.Block;
@@ -63,6 +64,30 @@ public class BlockHelper {
 		});
 	}
 
+	public static BlockState setZeroAge(BlockState blockState) {
+		if(blockState.has(BlockStateProperties.AGE_0_1))
+			return blockState.with(BlockStateProperties.AGE_0_1, 0);
+		if(blockState.has(BlockStateProperties.AGE_0_2))
+			return blockState.with(BlockStateProperties.AGE_0_2, 0);
+		if(blockState.has(BlockStateProperties.AGE_0_3))
+			return blockState.with(BlockStateProperties.AGE_0_3, 0);
+		if(blockState.has(BlockStateProperties.AGE_0_5))
+			return blockState.with(BlockStateProperties.AGE_0_5, 0);
+		if(blockState.has(BlockStateProperties.AGE_0_7))
+			return blockState.with(BlockStateProperties.AGE_0_7, 0);
+		if(blockState.has(BlockStateProperties.AGE_0_15))
+			return blockState.with(BlockStateProperties.AGE_0_15, 0);
+		if(blockState.has(BlockStateProperties.AGE_0_25))
+			return blockState.with(BlockStateProperties.AGE_0_25, 0);
+		if(blockState.has(BlockStateProperties.HONEY_LEVEL))
+			return blockState.with(BlockStateProperties.HONEY_LEVEL, 0);
+		if(blockState.has(BlockStateProperties.HATCH_0_2))
+			return blockState.with(BlockStateProperties.HATCH_0_2, 0);
+		if(blockState.has(BlockStateProperties.STAGE_0_1))
+			return blockState.with(BlockStateProperties.STAGE_0_1, 0);
+		return blockState;
+	}
+
 	public static int findAndRemoveInInventory(BlockState block, PlayerEntity player, int amount) {
 		int amountFound = 0;
 		Item required = getRequiredItem(block).getItem();
@@ -72,6 +97,12 @@ public class BlockHelper {
 
 		if (needsTwo)
 			amount *= 2;
+
+		if(block.has(BlockStateProperties.EGGS_1_4))
+			amount *= block.get(BlockStateProperties.EGGS_1_4);
+
+		if(block.has(BlockStateProperties.PICKLES_1_4))
+			amount *= block.get(BlockStateProperties.PICKLES_1_4);
 
 		{
 			// Try held Item first
@@ -112,6 +143,10 @@ public class BlockHelper {
 
 	public static ItemStack getRequiredItem(BlockState state) {
 		ItemStack itemStack = new ItemStack(state.getBlock());
+		if (itemStack.getItem() == Items.FARMLAND)
+			itemStack = new ItemStack(Items.DIRT);
+		else if (itemStack.getItem() == Items.GRASS_PATH)
+			itemStack = new ItemStack(Items.GRASS_BLOCK);
 		return itemStack;
 	}
 

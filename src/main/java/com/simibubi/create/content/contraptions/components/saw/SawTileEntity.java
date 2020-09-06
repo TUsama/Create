@@ -74,7 +74,7 @@ public class SawTileEntity extends BlockBreakingKineticTileEntity {
 	@Override
 	public void addBehaviours(List<TileEntityBehaviour> behaviours) {
 		super.addBehaviours(behaviours);
-		filtering = new FilteringBehaviour(this, new SawFilterSlot());
+		filtering = new FilteringBehaviour(this, new SawFilterSlot()).forRecipes();
 		behaviours.add(filtering);
 		behaviours.add(new DirectBeltInputBehaviour(this));
 	}
@@ -248,7 +248,7 @@ public class SawTileEntity extends BlockBreakingKineticTileEntity {
 		for (int roll = 0; roll < rolls; roll++) {
 			List<ItemStack> results = new LinkedList<ItemStack>();
 			if (recipe instanceof CuttingRecipe)
-				results = ((CuttingRecipe) recipe).rollResults().getItemStacks();
+				results = ((CuttingRecipe) recipe).rollResults();
 			else if (recipe instanceof StonecuttingRecipe)
 				results.add(recipe.getRecipeOutput()
 					.copy());

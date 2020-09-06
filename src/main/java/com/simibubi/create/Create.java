@@ -1,8 +1,12 @@
 package com.simibubi.create;
 
+import com.simibubi.create.foundation.command.ChunkUtil;
+import net.minecraftforge.common.MinecraftForge;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.simibubi.create.content.CreateItemGroup;
 import com.simibubi.create.content.contraptions.TorquePropagator;
 import com.simibubi.create.content.logistics.RedstoneLinkNetworkHandler;
@@ -15,6 +19,9 @@ import com.simibubi.create.foundation.command.ServerLagger;
 import com.simibubi.create.foundation.config.AllConfigs;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.simibubi.create.foundation.data.LangMerger;
+import com.simibubi.create.foundation.data.recipe.MechanicalCraftingRecipeGen;
+import com.simibubi.create.foundation.data.recipe.ProcessingRecipeGen;
+import com.simibubi.create.foundation.data.recipe.StandardRecipeGen;
 import com.simibubi.create.foundation.networking.AllPackets;
 import com.simibubi.create.foundation.worldgen.AllWorldFeatures;
 import com.tterrag.registrate.util.NonNullLazyValue;
@@ -46,10 +53,15 @@ public class Create {
 	public static ItemGroup baseCreativeTab = new CreateItemGroup();
 	public static ItemGroup palettesCreativeTab = new PalettesItemGroup();
 
+	public static Gson GSON = new GsonBuilder().setPrettyPrinting()
+		.disableHtmlEscaping()
+		.create();
+
 	public static ServerSchematicLoader schematicReceiver;
 	public static RedstoneLinkNetworkHandler redstoneLinkNetworkHandler;
 	public static TorquePropagator torquePropagator;
 	public static ServerLagger lagger;
+	public static ChunkUtil chunkUtil;
 
 	private static final NonNullLazyValue<CreateRegistrate> registrate = CreateRegistrate.lazy(ID);
 
@@ -85,6 +97,10 @@ public class Create {
 		torquePropagator = new TorquePropagator();
 		lagger = new ServerLagger();
 
+		chunkUtil = new ChunkUtil();
+		chunkUtil.init();
+		MinecraftForge.EVENT_BUS.register(chunkUtil);
+
 		AllPackets.registerPackets();
 		AllTriggers.register();
 		AllWorldFeatures.reload();
@@ -103,6 +119,9 @@ public class Create {
 		gen.addProvider(new AllAdvancements(gen));
 		gen.addProvider(new LangMerger(gen));
 		gen.addProvider(AllSoundEvents.BLAZE_MUNCH.generator(gen));
+		gen.addProvider(new StandardRecipeGen(gen));
+		gen.addProvider(new MechanicalCraftingRecipeGen(gen));
+		ProcessingRecipeGen.registerAll(gen);
 	}
 
 }
